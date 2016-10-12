@@ -11,6 +11,7 @@
 1
 val e = 1 + 2
 val n = e
+val u = ()
 "hoge"
 
 // 文
@@ -23,8 +24,15 @@ val unit = { val o = 1 }
 val unit2 = {class A(){}}
 
 var global = 1
+global
 global = 2 // この前後でglobalを用いた計算の結果が変わる
 global
 
+{ println("A"); println("B"); 1 + 2 }
+{ println("A"); println("B"); val o = 1 }
 
+def foo(): String = {
+  "foo" + "foo"
+}
 
+def foo2: String = "foo" + "foo"
