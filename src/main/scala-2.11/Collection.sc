@@ -35,3 +35,14 @@ val mm = mutable.Map("A" -> 1, "B" -> 2, "C" -> 3)
 mm.update("B", 5)
 mm
 
+Set(1, 1, 2, 3, 4, 5, 5)
+
+val is = Set(1, 2, 3, 4, 5)
+is - 5
+is
+
+import scala.collection.mutable
+
+val ms = mutable.Set(1, 2, 3, 4, 5)
+ms -= 5
+ms
