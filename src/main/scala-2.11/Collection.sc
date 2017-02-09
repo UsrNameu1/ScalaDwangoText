@@ -1,11 +1,19 @@
-
+1 max 2
 List(List(1, 2, 3), List(4, 5)).flatMap{e => e.map{g => g + 1}}
 
 List(1, 2, 3).flatMap{e => List(e * 2, e * 3)}
 
 List(1, 2, 3).flatMap{e => List(4, 5).map{g => e * g}}
 
-for(x <- List(1, 2, 3); y <- List(4, 5)) yield x * y
+for {
+  x <- List(1, 2, 3)
+  y <- List(4, 5)
+} yield x * y
+
+for {
+  x <- Some(1)
+  y <- Some(2)
+} yield x * y
 
 List(1, 2).flatMap{e => List(3, 5).flatMap{g => List(7, 11).map(h => e * g * h)}}
 for {
